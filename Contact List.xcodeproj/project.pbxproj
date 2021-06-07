@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		E05B8BF6266EAC130010F0CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8BF5266EAC130010F0CE /* AppDelegate.swift */; };
 		E05B8BF8266EAC130010F0CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8BF7266EAC130010F0CE /* SceneDelegate.swift */; };
-		E05B8BFA266EAC130010F0CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8BF9266EAC130010F0CE /* ViewController.swift */; };
 		E05B8BFD266EAC130010F0CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05B8BFB266EAC130010F0CE /* Main.storyboard */; };
 		E05B8BFF266EAC160010F0CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05B8BFE266EAC160010F0CE /* Assets.xcassets */; };
 		E05B8C02266EAC160010F0CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05B8C00266EAC160010F0CE /* LaunchScreen.storyboard */; };
+		E05B8C17266EB77A0010F0CE /* FullInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C16266EB77A0010F0CE /* FullInfo.swift */; };
+		E05B8C1C266EB7DF0010F0CE /* ListOfContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */; };
+		E05B8C1F266EB8170010F0CE /* OverviewListOfContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E05B8BF2266EAC130010F0CE /* Contact List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05B8BF5266EAC130010F0CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05B8BF7266EAC130010F0CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E05B8BF9266EAC130010F0CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E05B8BFC266EAC130010F0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E05B8BFE266EAC160010F0CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05B8C01266EAC160010F0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05B8C03266EAC160010F0CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05B8C16266EB77A0010F0CE /* FullInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfo.swift; sourceTree = "<group>"; };
+		E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfContacts.swift; sourceTree = "<group>"; };
+		E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewListOfContacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		E05B8BF4266EAC130010F0CE /* Contact List */ = {
 			isa = PBXGroup;
 			children = (
+				E05B8C11266EB6A70010F0CE /* Resources */,
+				E05B8C10266EB69E0010F0CE /* Storyboards */,
+				E05B8C0F266EB6910010F0CE /* ViewControllers */,
 				E05B8BF5266EAC130010F0CE /* AppDelegate.swift */,
 				E05B8BF7266EAC130010F0CE /* SceneDelegate.swift */,
-				E05B8BF9266EAC130010F0CE /* ViewController.swift */,
-				E05B8BFB266EAC130010F0CE /* Main.storyboard */,
-				E05B8BFE266EAC160010F0CE /* Assets.xcassets */,
-				E05B8C00266EAC160010F0CE /* LaunchScreen.storyboard */,
 				E05B8C03266EAC160010F0CE /* Info.plist */,
 			);
 			path = "Contact List";
+			sourceTree = "<group>";
+		};
+		E05B8C0F266EB6910010F0CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E05B8C16266EB77A0010F0CE /* FullInfo.swift */,
+				E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */,
+				E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E05B8C10266EB69E0010F0CE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E05B8C00266EAC160010F0CE /* LaunchScreen.storyboard */,
+				E05B8BFB266EAC130010F0CE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E05B8C11266EB6A70010F0CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E05B8BFE266EAC160010F0CE /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05B8BFA266EAC130010F0CE /* ViewController.swift in Sources */,
+				E05B8C17266EB77A0010F0CE /* FullInfo.swift in Sources */,
+				E05B8C1F266EB8170010F0CE /* OverviewListOfContacts.swift in Sources */,
 				E05B8BF6266EAC130010F0CE /* AppDelegate.swift in Sources */,
 				E05B8BF8266EAC130010F0CE /* SceneDelegate.swift in Sources */,
+				E05B8C1C266EB7DF0010F0CE /* ListOfContacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJNJ35894G;
 				INFOPLIST_FILE = "Contact List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJNJ35894G;
 				INFOPLIST_FILE = "Contact List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
