@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03055D9266FF1DA00EC41ED /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03055D8266FF1DA00EC41ED /* Person.swift */; };
 		E05B8BF6266EAC130010F0CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8BF5266EAC130010F0CE /* AppDelegate.swift */; };
 		E05B8BF8266EAC130010F0CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8BF7266EAC130010F0CE /* SceneDelegate.swift */; };
 		E05B8BFD266EAC130010F0CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05B8BFB266EAC130010F0CE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E03055D8266FF1DA00EC41ED /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E05B8BF2266EAC130010F0CE /* Contact List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05B8BF5266EAC130010F0CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05B8BF7266EAC130010F0CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03055DB266FF1E500EC41ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E03055D8266FF1DA00EC41ED /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E05B8BE9266EAC130010F0CE = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		E05B8BF4266EAC130010F0CE /* Contact List */ = {
 			isa = PBXGroup;
 			children = (
+				E03055DB266FF1E500EC41ED /* Models */,
 				E05B8C11266EB6A70010F0CE /* Resources */,
 				E05B8C10266EB69E0010F0CE /* Storyboards */,
 				E05B8C0F266EB6910010F0CE /* ViewControllers */,
@@ -167,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03055D9266FF1DA00EC41ED /* Person.swift in Sources */,
 				E05B8C17266EB77A0010F0CE /* FullInfo.swift in Sources */,
 				E05B8C1F266EB8170010F0CE /* OverviewListOfContacts.swift in Sources */,
 				E05B8BF6266EAC130010F0CE /* AppDelegate.swift in Sources */,
@@ -326,6 +338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "alexanderkovzhut.Contact-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -346,6 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "alexanderkovzhut.Contact-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
