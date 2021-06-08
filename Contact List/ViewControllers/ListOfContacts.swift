@@ -9,7 +9,7 @@ import UIKit
 
 class ListOfContacts: UITableViewController {
     
-    let contacts = [
+    var contacts = [
         Person(firstName: "Elon", lastName: "Mask", email: "spacex@mail.com", phoneNumber: "999666"),
         Person(firstName: "Elon", lastName: "Mask", email: "spacex@mail.com", phoneNumber: "999666"),
         Person(firstName: "Elon", lastName: "Mask", email: "spacex@mail.com", phoneNumber: "999666"),
@@ -41,13 +41,36 @@ class ListOfContacts: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath) as! TableViewCell
+        let contact = contacts[indexPath.row]
         
+        cell.set(contact: contact)
         
 
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            contacts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedContact = contacts.remove(at: sourceIndexPath.row)
+        contacts.insert(movedContact, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

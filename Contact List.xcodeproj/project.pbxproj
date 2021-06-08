@@ -16,6 +16,7 @@
 		E05B8C17266EB77A0010F0CE /* FullInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C16266EB77A0010F0CE /* FullInfo.swift */; };
 		E05B8C1C266EB7DF0010F0CE /* ListOfContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */; };
 		E05B8C1F266EB8170010F0CE /* OverviewListOfContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */; };
+		E0CE7DEB26700EB600042E1B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE7DEA26700EB600042E1B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E05B8C16266EB77A0010F0CE /* FullInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfo.swift; sourceTree = "<group>"; };
 		E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfContacts.swift; sourceTree = "<group>"; };
 		E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewListOfContacts.swift; sourceTree = "<group>"; };
+		E0CE7DEA26700EB600042E1B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				E05B8C16266EB77A0010F0CE /* FullInfo.swift */,
 				E05B8C1B266EB7DF0010F0CE /* ListOfContacts.swift */,
 				E05B8C1E266EB8170010F0CE /* OverviewListOfContacts.swift */,
+				E0CE7DEA26700EB600042E1B /* TableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				E05B8C1F266EB8170010F0CE /* OverviewListOfContacts.swift in Sources */,
 				E05B8BF6266EAC130010F0CE /* AppDelegate.swift in Sources */,
 				E05B8BF8266EAC130010F0CE /* SceneDelegate.swift in Sources */,
+				E0CE7DEB26700EB600042E1B /* TableViewCell.swift in Sources */,
 				E05B8C1C266EB7DF0010F0CE /* ListOfContacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
