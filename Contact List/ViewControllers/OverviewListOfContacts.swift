@@ -15,12 +15,13 @@ class OverviewListOfContacts: UITableViewController {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-
+    var contact = Person(firstName: "", lastName: "", email: "", phoneNumber: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateSaveButton()
-
+        updateUI()
     }
     
     private func updateSaveButton() {
@@ -31,11 +32,30 @@ class OverviewListOfContacts: UITableViewController {
         
         saveButton.isEnabled = !firstName.isEmpty && !lastName.isEmpty && !phoneNumber.isEmpty && !email.isEmpty
     }
-
+    
+    private func updateUI() {
+        firstNameField.text = contact.firstName
+        lastNameField.text = contact.lastName
+        phoneNumberField.text = contact.phoneNumber
+        emailField.text = contact.email
+    }
+    
     @IBAction func textFieldChanged(_ sender: UITextField) {
         updateSaveButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "saveSegue" else { return }
+        
+        let firstNameSave = firstNameField.text ?? ""
+        let lastNameSave = lastNameField.text ?? ""
+        let phoneNumberSave = phoneNumberField.text ?? ""
+        let emailSave = emailField.text ?? ""
+        
+        self.contact = Person(firstName: firstNameSave, lastName: lastNameSave, email: phoneNumberSave, phoneNumber: emailSave)
+    }
     
 }
 

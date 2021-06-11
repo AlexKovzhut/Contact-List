@@ -13,10 +13,9 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
+         
     }
-
+    
     func set(contact: Person) {
         self.cellLabel.text = contact.firstName + " " + contact.lastName
     }

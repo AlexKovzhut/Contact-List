@@ -36,6 +36,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellLabel" destination="bBY-8A-cpt" id="C9X-0O-g9w"/>
+                                    <segue destination="8Eb-Pw-B4F" kind="show" identifier="editContact" id="7tx-ug-3uC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1F-50-AHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3223.1884057971015" y="225"/>
+            <point key="canvasLocation" x="3338" y="-21"/>
         </scene>
         <!--Full Info-->
         <scene sceneID="2Tm-hd-ggb">
@@ -214,7 +215,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIi-yg-iQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="AX7-5z-nzE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3221.739130434783" y="-442.63392857142856"/>
+            <point key="canvasLocation" x="3575" y="700"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6l-4T-qeZ">
@@ -261,6 +262,9 @@
             <point key="canvasLocation" x="2313.04347826087" y="225"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7tx-ug-3uC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
