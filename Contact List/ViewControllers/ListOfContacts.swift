@@ -26,6 +26,10 @@ class ListOfContacts: UITableViewController {
         self.tabBarController?.navigationItem.leftBarButtonItem = self.editButtonItem
         
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        
+    }
 
     // MARK: - Table view data source
 
