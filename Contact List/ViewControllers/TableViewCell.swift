@@ -10,16 +10,13 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var cellLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-         
+    
     }
     
-    func set(contact: Person) {
-        self.cellLabel.text = contact.firstName + " " + contact.lastName
+    func set( contacts: Person) {
+        self.cellLabel.text = "\(contacts.firstName) \(contacts.lastName)"
     }
     
-    
-
 }
