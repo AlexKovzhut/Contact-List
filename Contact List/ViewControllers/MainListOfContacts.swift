@@ -9,6 +9,8 @@ import UIKit
 
 class MainListOfContacts: UITableViewController {
     
+    private var contacts = Person.getContact()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

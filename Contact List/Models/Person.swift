@@ -13,15 +13,53 @@ struct Person {
 }
 
 class DataManager {
-    var firstNameList = ["Alex", "John", "Kate", "Jack", "Zoe", "Sara"]
-    var lastNameList = ["Black", "Orange", "Brown", "White", "Silver", "Gold"]
-    var phoneNumberList = ["111", "222", "333", "444", "555", "666"]
-    var emailList = ["111@mail.com", "222@mail.com", "333@mail.com", "444@mail.com", "555@mail.com", "666@mail.com"]
+    enum Contact {
+        case firstName, lastName, phoneNumber, email
     }
     
-var firstName = DataManager().firstNameList.randomElement() ?? ""
-    var lastName = DataManager().lastNameList.randomElement() ?? ""
-    var phoneNumber = DataManager().phoneNumberList.randomElement() ?? ""
-    var email = DataManager().emailList.randomElement() ?? ""
+    let firstNameList = ["Alex", "John", "Kate", "Jack", "Zoe", "Sara"]
+    let lastNameList = ["Black", "Orange", "Brown", "White", "Silver", "Gold"]
+    let phoneNumberList = ["111", "222", "333", "444", "555", "666"]
+    let emailList = ["111@mail.com", "222@mail.com", "333@mail.com", "444@mail.com", "555@mail.com", "666@mail.com"]
+    
+    var firstName: Contact = .firstName
+    var lastName: Contact = .lastName
+    var phoneNumber: Contact = .phoneNumber
+    var email: Contact = .email
+    
+    init(firstName: Contact) {
+        self.firstName = firstNameList.randomElement() as! Contact
+    }
+    init(lastName: Contact) {
+        self.lastName = lastNameList.randomElement() as! Contact
+    }
+    init(phoneNumber: Contact) {
+        self.phoneNumber = phoneNumberList.randomElement() as! Contact
+    }
+    init(email: Contact) {
+        self.email = emailList.randomElement() as! Contact
+    }
+    
+}
 
-var list = [firstName, lastName, phoneNumber, email]
+extension Person {
+    
+    static func getContact() -> [Person] {
+        var firstName = DataManager(firstName: .firstName) as! String
+        var lastName = DataManager(lastName: .lastName) as! String
+        var phoneNumber = DataManager(phoneNumber: .phoneNumber) as! String
+        var email = DataManager(email: .email) as! String
+        
+        return [
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
+            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email)
+        ]
+    }
+}
+
+
+
