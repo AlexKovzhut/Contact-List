@@ -10,54 +10,42 @@ struct Person {
     var lastName: String
     var phoneNumber: String
     var email: String
-}
-
-class DataManager {
-    enum Contact {
-        case firstName, lastName, phoneNumber, email
-    }
     
-    let firstNameList = ["Alex", "John", "Kate", "Jack", "Zoe", "Sara"]
-    let lastNameList = ["Black", "Orange", "Brown", "White", "Silver", "Gold"]
-    let phoneNumberList = ["111", "222", "333", "444", "555", "666"]
-    let emailList = ["111@mail.com", "222@mail.com", "333@mail.com", "444@mail.com", "555@mail.com", "666@mail.com"]
-    
-    var firstName: Contact = .firstName
-    var lastName: Contact = .lastName
-    var phoneNumber: Contact = .phoneNumber
-    var email: Contact = .email
-    
-    init(firstName: Contact) {
-        self.firstName = firstNameList.randomElement() as! Contact
-    }
-    init(lastName: Contact) {
-        self.lastName = lastNameList.randomElement() as! Contact
-    }
-    init(phoneNumber: Contact) {
-        self.phoneNumber = phoneNumberList.randomElement() as! Contact
-    }
-    init(email: Contact) {
-        self.email = emailList.randomElement() as! Contact
+    var title: String {
+        "\(firstName) \(lastName)"
     }
     
 }
 
 extension Person {
-    
-    static func getContact() -> [Person] {
-        var firstName = DataManager(firstName: .firstName) as! String
-        var lastName = DataManager(lastName: .lastName) as! String
-        var phoneNumber = DataManager(phoneNumber: .phoneNumber) as! String
-        var email = DataManager(email: .email) as! String
+    static func getContactList() -> [Person] {
         
-        return [
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email),
-            Person(firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email)
-        ]
+        var persons: [Person] = []
+        
+        let firstNames = DataManager.shared.firstNameList.shuffled()
+        let lastNames = DataManager.shared.lastNameList.shuffled()
+        let phoneNumbers = DataManager.shared.phoneNumberList.shuffled()
+        let emails = DataManager.shared.emailList.shuffled()
+        
+        let iterationCount = min(
+            firstNames.count,
+            lastNames.count,
+            phoneNumbers.count,
+            emails.count
+        ) - 1
+        
+        for index in 1...iterationCount {
+            let person = Person(
+                firstName: firstNames[index],
+                lastName: lastNames[index],
+                phoneNumber: phoneNumbers[index],
+                email: emails[index]
+            )
+            
+            persons.append(person)
+        }
+        
+        return persons
     }
 }
 

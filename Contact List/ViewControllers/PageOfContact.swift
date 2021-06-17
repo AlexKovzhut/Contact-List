@@ -19,9 +19,9 @@ class PageOfContact: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateUI()
+
         updateSaveButton()
+        updateUI()
     }
     
     private func updateSaveButton() {

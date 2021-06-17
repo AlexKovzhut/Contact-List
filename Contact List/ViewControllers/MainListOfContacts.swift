@@ -9,7 +9,7 @@ import UIKit
 
 class MainListOfContacts: UITableViewController {
     
-    private var contacts = Person.getContact()
+    var contacts: [Person] = Person.getContactList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +54,19 @@ class MainListOfContacts: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath)
         let contact = contacts[indexPath.row]
         
-        cell.set(contacts: contact)
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = contact.title
+        
+        cell.contentConfiguration = content
         
         return cell
     }
-
+    
+    //Edit button
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
@@ -72,7 +77,7 @@ class MainListOfContacts: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
