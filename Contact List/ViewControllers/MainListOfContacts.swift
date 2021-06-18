@@ -9,13 +9,12 @@ import UIKit
 
 class MainListOfContacts: UITableViewController {
     
-    var contacts: [Person] = Person.getContactList()
+    
+    var contacts: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Contacts"
-        self.navigationItem.leftBarButtonItem = editButtonItem
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {

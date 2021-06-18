@@ -9,7 +9,7 @@ import UIKit
 
 class SecondaryListOfContacts: UITableViewController {
     
-    var contacts: [Person] = Person.getContactList()
+    var contacts: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,14 @@ class SecondaryListOfContacts: UITableViewController {
         self.navigationItem.title = "Contacts List"
     }
     
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return contacts.count
+    }
+    
+    //Использование метода для присваивания заголовка секции
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        contacts[section].title
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -14,7 +14,6 @@ struct Person {
     var title: String {
         "\(firstName) \(lastName)"
     }
-    
 }
 
 extension Person {
